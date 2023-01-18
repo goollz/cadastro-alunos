@@ -1,0 +1,138 @@
+<!--GUSTAVO GARCIA DE CAMPOS 101911130-->
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <title>Cadastro de Alunos</title>
+    </head>
+    <body>
+        <div class="container">
+            <form data-Formulario>
+                <fieldset class="border m-4 p-4">
+                    <legend class="w-25">Cadastro de Alunos</legend>
+                    <!--NOME E DATA DE NASCIMENTO-->
+                    <div class="form-group row">
+                        <!--NOME-->
+                        <div class="col-2">
+                            <label class="col-form-label" for="Nome"><b>NOME:</b></label>
+                        </div>
+                        <div class="col-4 m-0 p-0">
+                            <input data-Nome class="form-control" id="Nome" type="text" placeholder="Digite seu nome aqui..." required/>
+                        </div>
+                        <!--DATA DE NASCIMENTO-->
+                        <div class="col-2">
+                            <label class="col-form-label" for="DataNascimento"><b>DATA NASC:</b></label>
+                        </div>
+                        <div class="col-4 m-0 p-0">
+                            <input data-Data class="form-control" id="date" type="date" required/>
+                        </div>
+                    </div>
+                    <!--EMAIL E RA-->
+                    <div class="form-group row">
+                        <!--EMAIL-->
+                        <div class="col-2">
+                            <label class="col-form-label" for="email"><b>EMAIL:</b></label>
+                        </div>
+                        <div class="input-group col-4 m-0 p-0">
+                            <div class="input-group-prepend">
+								<span class="input-group-text">@</span>
+							</div>
+							<input data-Email class="form-control" type="email" id="email" name="email" placeholder="Informe seu email" required/>
+                        </div>
+                        <!--RA-->
+                        <div class="col-2">
+                            <label class="col-form-label" for="RA"><b>RA:</b></label>
+                        </div>
+                        <div class="col-4 m-0 p-0">
+                            <input data-RA class="form-control" id="RA" type="text" placeholder="Digite seu RA aqui..." required/>
+                        </div>
+                    </div>
+                    <!--CIDADE E CURSO-->
+                    <div class="form-group row">
+                        <!--CIDADE-->
+                        <div class="col-2">
+                            <label class="col-form-label" for="cidade"><b>CIDADE:</b></label>
+                        </div>
+                        <div class="col-4 m-0 p-0">
+                            <select data-Cidade class="browser-default custom-select" id="cidade">
+                                <option selected>...</option>
+                                <option value="Jaú">Jaú</option>
+                                <option value="Guarujá">Guarujá</option>
+                                <option value="Bauru">Bauru</option>
+                                <option value="São Paulo">São Paulo</option>
+                                <option value="Presidente Prudente">Presidente Prudente</option>
+                            </select>
+                        </div>
+                        <!--CURSO-->
+                        <div class="col-2">
+                            <label class="col-form-label" for="curso"><b>CURSO:</b></label>
+                        </div>
+                        <div class="col-4 m-0 p-0">
+                            <select data-Curso class="browser-default custom-select" id="curso">
+                                <option selected>...</option>
+                                <option value="Medicina">Medicina</option>
+                                <option value="Zootecnia">Zootecnia</option>
+                                <option value="Fisoterapia">Fisoterapia</option>
+                                <option value="Engenharia Civil">Engenharia Civil</option>
+                                <option value="Ciência da Computação">Ciência da Computação</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!--GOSTO E DIFICULDADE-->
+                    <div class="form-group row">
+                        <!--GOSTO-->
+                        <div class="col-2">
+                            <label class="col-form-label"><b>ESTÁ GOSTANDO:</b></label>
+                        </div>
+                        <div class="col-4 p-0 m-0">
+                            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                <label class="btn btn-outline-danger active" data-LabSim>
+                                  <input type="radio" name="Gosto" id="SIM" value="SIM" autocomplete="off" checked data-RadioSim>SIM
+                                </label>
+                                <label class="btn btn-outline-danger" data-LabNao>
+                                  <input type="radio" name="Gosto" id="NAO" value="NAO" autocomplete="off" data-RadioNao>NÃO
+                                </label>
+                            </div>
+                        </div>
+                        <!--DIFICULDADE-->
+                        <div class="col-2">
+							<label class="col-form-label"><b>DIFICULDADE:</b></label>
+						</div>
+						<div class="col-4 p-0 m-0">
+							<div class="btn-group btn-group-toggle" data-toggle="buttons">
+							  <label class="btn btn-outline-danger active" data-LabFacil>
+								<input type="radio" name="Dificuldade" id="FACIL" value="FACIL" autocomplete="off" checked data-RadioFacil>FÁCIL
+							  </label>
+							  <label class="btn btn-outline-danger" data-LabMediana>
+								<input type="radio" name="Dificuldade" id="MEDIANA" value="MEDIANA" autocomplete="off" data-RadioMediana>MEDIANA
+							  </label>
+							  <label class="btn btn-outline-danger" data-LabDificil>
+								<input type="radio" name="Dificuldade" id="DIFICIL" value="DIFICIL" autocomplete="off" data-RadioDificil>DIFICIL
+							  </label>
+							</div>
+						</div>
+                    </div>
+                    <div class="form-group row">
+						<div class="col-12 offset-5">
+                            <button type="submit" class="btn btn-outline-danger" data-btnEnviar>CADASTRAR</button>
+						</div>
+					</div>
+                </fieldset>
+            </form>
+            <div data-Mensagem>
+            </div>
+            <div data-Tabela><!--EXIBE TABELA-->
+            </div>
+        </div>
+    </body>
+    <!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<!-- Popper JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+	<!--Meu arquivo script-->
+    <script src="script/classeAluno.js"></script>
+    <script src="script/scriptAluno.js"></script>
+</html>
